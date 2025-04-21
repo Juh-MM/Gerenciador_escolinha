@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciamento da escolinha</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html">Professores</a>
+        <a href="alunos.html">Alunos</a>
+    </nav>
+
+    <h1>Professores Cadastrados</h1>
+    <button id="addProfessorBtn">Adicionar professor</button>
+
+    <table id="professoresTable">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Perfil</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Os professores serão listados aqui via JS -->
+        </tbody>
+    </table>
+
+    <div id="professorModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modalTitle">Adicionar Professor</h2>
+            <form id="professorForm">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+
+                <label for="perfil">Perfil:</label>
+                <select id="perfil" name="perfil" required>
+                    <option value="Professor">Professor</option>
+                    <option value="Estagiário">Estagiário</option>
+                </select>
+
+                <label for="salario">Salário:</label>
+                <input type="number" id="salario" name="salario" required>
+
+                <label for="senha">Senha:</label>
+                <input type="password" id="senha" name="senha" required>
+
+                <button type="submit" id="saveProfessorBtn">Salvar</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/professor.js"></script>
+</body>
+</html>
