@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciamento da escolinha</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html">Professores</a>
+        <a href="alunos.html">Alunos</a>
+    </nav>
+
+    <h1>Alunos Matriculados</h1>
+    <button id="addAlunoBtn">Adicionar Aluno</button>
+
+    <table id="alunosTable">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Telefone</th>
+                <th>Responsável</th>
+                <th>Professor</th>
+                <th>Entrada</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Os alunos serão listadas aqui via JS -->
+        </tbody>
+    </table>
+
+    <!-- Modal para adicionar/editar alunos -->
+    <div id="alunoModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modalTitleAluno">Adicionar Plantação</h2>
+            <form id="alunoForm">
+
+                <label for="nomeAluno">Nome:</label>
+                <input type="text" id="nomeAluno" name="nome" required>
+
+                <label for="telefoneAluno">Telefone:</label>
+                <input type="number" id="telefoneAluno" name="telefone" required>
+               
+                <label for="responsavel">Responsável:</label>
+                <input type="text" id="responsavelAluno" name="responsavel" required>
+
+                <label for="professor">Professor:</label>
+                <select id="professor" name="professor" required>
+                </select>
+      
+                <label for="entradaAluno">Entrada:</label>
+                <input type="date" id="entradaAluno" name="estrada" required>
+    
+                    <!-- Os usuários serão carregados aqui via JS -->
+
+                <button type="submit" id="saveAlunoBtn">Salvar</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/aluno.js"></script>
+</body>
+</html>
